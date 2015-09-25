@@ -1,28 +1,54 @@
 {
   "name": "react-progress-button",
-  "version": "1.1.0",
-  "description": "Simple react.js component for a inline progress indicator",
-  "main": "react-progress-button.js",
-  "dependencies": {
-    "react": "0.x"
-  },
-  "scripts": {},
+  "version": "0.0.2",
+  "description": "A Date Input Component built with and for React.js",
+  "main": "lib/ProgressButton.js",
+  "author": "Jed Watson",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mathieudutour/react-progress-button"
+    "url": "https://github.com/JedWatson/react-date-input.git"
+  },
+  "dependencies": {
+    "blacklist": "^1.1.2",
+    "react": "^0.13.3",
+    "react-tappable": "^0.6.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^3.1.14",
+    "babel-jest": "^5.2.0",
+    "eslint": "^0.22.1",
+    "eslint-plugin-react": "^2.5.0",
+    "gulp": "^3.9.0",
+    "jest-cli": "^0.4.7",
+    "react": ">=0.12.0",
+    "react-component-gulp-tasks": "^0.7.0"
+  },
+  "peerDependencies": {
+    "react": ">=0.12.0"
+  },
+  "browserify-shim": {
+    "blacklist": "blobal:blacklist",
+    "classnames": "global:classNames",
+    "moment": "global:moment",
+    "react": "global:React"
+  },
+  "scripts": {
+    "start": "gulp dev",
+    "examples": "gulp dev:server",
+    "watch": "gulp watch:lib"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ],
+    "testPathDirs": [
+      "<rootDir>/src"
+    ]
   },
   "keywords": [
     "react",
-    "progress",
-    "button",
-    "component",
-    "javascript",
     "react-component"
-  ],
-  "author": "Mathieu Dutour",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mathieudutour/react-progress-button/issues"
-  },
-  "homepage": "https://github.com/mathieudutour/react-progress-button"
+  ]
 }

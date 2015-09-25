@@ -1,33 +1,35 @@
 {
-  "name": "react-progress-button",
-  "main": [
-    "react-progress-button.js",
-    "react-progress-button.css"
+  "name": "react-date-input",
+  "main": "dist/react-date-input.min.js",
+  "version": "0.0.2",
+  "homepage": "https://github.com/JedWatson/react-date-input",
+  "authors": [
+    "Jed Watson"
   ],
-  "version": "1.1.0",
-  "homepage": "https://github.com/mathieudutour/react-progress-button",
-  "description": "Simple react.js component for a inline progress indicator",
+  "description": "A Date Input Component built with and for React.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
   "keywords": [
     "react",
-    "progress",
-    "button",
-    "component",
-    "javascript",
-    "react-component"
-  ],
-  "authors": [
-    "Mathieu Dutour <mathieu@dutour.me>"
+    "react-component",
+    "date",
+    "datepicker",
+    "dateinput",
+    "input",
+    "form",
+    "ui"
   ],
   "license": "MIT",
   "ignore": [
-    "**/.*",
+    ".editorconfig",
+    ".gitignore",
+    "package.json",
+    "src",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests",
-    "example"
-  ],
-  "dependencies": {
-    "react": "^0.12.0"
-  }
+    "example",
+    "test"
+  ]
 }
