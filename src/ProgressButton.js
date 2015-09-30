@@ -6,6 +6,7 @@ const ProgressButton = React.createClass({
   propTypes: {
     classNamespace: React.PropTypes.string,
     durationError: React.PropTypes.number,
+    disabled: React.PropTypes.bool,
     durationSuccess: React.PropTypes.number,
     form: React.PropTypes.string,
     onClick: React.PropTypes.func,
@@ -36,9 +37,9 @@ const ProgressButton = React.createClass({
 
   render: function() {
     return (
-    	<Tappable className={this.props.classNamespace + "container " + this.state.currentState} onTap={this.handleClick}>
+    	<Tappable className={this.props.classNamespace + "container " + this.state.currentState} onTap={!this.props.disabled ? this.handleClick : null}>
 			{
-	    	React.createElement("button", {type: this.props.type, form: this.props.form,
+	    	React.createElement("button", {disabled: this.props.disabled, type: this.props.type, form: this.props.form,
 	        className: this.props.classNamespace + "button"},
 	        React.createElement("span", null, this.props.children),
 	        React.createElement("svg", {className: this.props.classNamespace + "progress-circle",
